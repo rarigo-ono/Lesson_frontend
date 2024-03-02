@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11-9</title>
+</head>
+<body>
+    <h2>JavaScript const</h2>
+    <p>constで配列宣言しても、変更は可能</p>
+
+    <p id="demo1"></p>
+
+    <script>
+        //再宣言
+        var x = 2;
+        var x = 3;
+        x = 4;
+        console.log(x);
+
+        /*
+        //定数オブジェクト作成
+        const car = {type:"Fiat", model:"500", color:"white"};
+        //プロパティ変更
+        car.color = "red";
+        //プロパティ追加
+        car.owner = "Jhonson"
+        
+
+        document.getElementById("demo1").innerHTML = "Car owner is " + car.owner;
+        */
+        /*
+        //配列を作成
+        const cars = ["Saab", "Volvo", "BMW"];
+        //配列要素の変更
+        cars[0] = "Suzuki";
+        //配列要素の追加
+        cars.push("Audi");
+        //再割当ては不可
+        //cars = ["Daihatsu", "Honda", "Matsuda"];
+        //配列を出力
+        document.getElementById("demo1").innerHTML = cars;
+        */
+
+        /*
+        try{
+            const PI = 3.141592653589793;
+            PI = 3.14
+        } catch(err) {
+            document.getElementById("demo1").innerHTML = err;
+        }
+        /*
+
+        /*
+        constを使う場合
+        新しい配列
+        新しいオブジェクト
+        新しい機能
+        新しいRegExp
+        */
+    </script>
+</body>
+</html>
