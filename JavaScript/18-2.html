@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11-18</title>
+</head>
+<body>
+    <h1>文字列</h1>
+    <h2>テンプレート文字列</h2>
+    <p id="template"></p>
+    <h2>オブジェクトとしての文字列</h2>
+    <p id="string"></p>
+    <p id="obj"></p>
+    <p id="boolean"></p>
+
+    <script>
+        let text = 
+        `The quick
+        brown fox
+        jumps over
+        the lazy dog`;
+        console.log(text);
+        document.getElementById("template").innerHTML = text;
+
+        //文字列として
+        let x = "John";
+        //オブジェクトとして
+        let y = new String("John");
+        //出力
+        document.getElementById("string").innerHTML =
+        x + " タイプ: " + typeof x;
+        document.getElementById("obj").innerHTML =
+        y + " タイプ: " + typeof y;
+        document.getElementById("boolean").innerHTML =
+        (x == y);
+
+
+    </script>
+</body>
+</html>

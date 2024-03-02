@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11-18</title>
+</head>
+<body>
+    <h1>文字列</h1>
+    <p>テキストを格納するためのもの</p>
+    <p>引用符で囲んで記述する</p>
+    <h2>使い方</h2>
+    <p>0個以上で囲む</p>
+    <h3>例</h3>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <h3>文字列の長さ</h3>
+    <p id="demo5"></p>
+    <p id="length"></p>
+
+    <h3>エスケープ文字</h3>
+    <p id="demo6"></p>
+
+    <script>
+
+        let text = "John Doe"
+        document.getElementById("demo").innerHTML = text;
+        let carName1 = "Volvo XC60";
+        let carName2 = "Volvo XC60";
+
+        document.getElementById("demo2").innerHTML = carName1;
+        document.getElementById("demo3").innerHTML = carName2;
+
+        let text2 = `He's often called "Johnny"`;
+        document.getElementById("demo4").innerHTML = text2;
+
+        let text3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("demo5").innerHTML = text3;
+        document.getElementById("length").innerHTML =
+        "上の文字列数は　" + text3.length;
+
+        let text4 = "We are the so-called \"Vikings\" from the north.";
+        document.getElementById("demo6").innerHTML = text4;
+        
+    </script>
+</body>
+</html>

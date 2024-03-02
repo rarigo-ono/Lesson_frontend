@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11-17</title>
+</head>
+<body>
+    <h1>イベント</h1>
+    <ul>
+        <li>HTML要素に発生する<b>"もの"</b>のこと</li>
+        <li>例
+            <ul>
+                <li>Webページの読み込みの終了</li>
+                <li>入力値の変更</li>
+                <li>ボタンクリック</li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+    <h1>JavaScript HTML Events</h1>
+    <h2>The onclick Attribute</h2>
+    <!--
+    <button onclick="document.getElementById('demo').innerHTML = Date()">今何時か調べる</button>
+    <p id="demo"></p>
+    
+
+    <button onclick="this.innerHTML = Date()">今何時か調べる</button>
+    -->
+    <button onclick="displayDate()">今何時か調べる</button>
+
+    <script>
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+
+    <p id="demo"></p>
+
+    <h2>一般的なイベント</h2>
+    <ul>
+        <li>onchange 要素が変更</li>
+        <li>onclick 要素のクリック</li>
+        <li>onmouseover 要素の上にマウスを移動</li>
+        <li>onmouseout 要素から離す</li>
+        <li>onkeydown キーボードのキーを押す</li>
+        <li>onload ブラウザの読み込みが完了</li>
+    </ul>
+</body>
+</html>
