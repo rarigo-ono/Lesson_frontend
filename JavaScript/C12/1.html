@@ -86,6 +86,35 @@
         let ans111 = text11.padStart(4, "x");
         console.log(ans111);
 
+        //12 padEnd()
+        let text12 = "5";
+        let ans12 = text12.padEnd(4, "0");
+        console.log(ans12);
+
+        //13 repeat()
+        let text13 = "Hello World!";
+        let ans13 = text13.repeat(3);
+        console.log(ans13);
+
+        //14 replace()
+        let text14 = "Please visit Microsoft";
+        let ans14 = text14.replace("Microsoft", "W3Schools");
+        let newans14 = text14.replace(/MICROSOFT/i, "W3Schools");
+        console.log(ans14);
+        console.log(newans14);
+
+        //15 replaceAll()
+        let text15 = "I love cats. Cats are very easy to love. Cats are very popular."
+        let ans15 = text15.replaceAll("Cats", "Dogs");
+        let ans151 = text15.replaceAll("cats", "dogs");
+        console.log(ans15);
+        console.log(ans151);
+
+        //16
+        let text16 = "a,b,c,d,e,f";
+        const myArray = text16.split(",");
+        console.log(myArray[1]);
+
     </script>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12-2</title>
+</head>
+<body>
+    <script>
+        //1 indexOf()
+        let text1 = "Please locate where 'locate' occurs!";
+        let index = text1.indexOf("locate");
+        console.log(index);
+
+        //2 lastIndexOf()
+        let text2 = "Please locate where 'locate' occurs!";
+        let index2 = text2.lastIndexOf("locate");
+        console.log(index2);
+        let index3 = text2.lastIndexOf("John");
+        console.log(index3);;
+
+        //3 search()
+        let text3 = "Please locate where 'locate' occurs!";
+        let ans3 = text3.search("locate");
+        console.log(ans3);;
+
+        //4 match()
+        let text4 = "The rain in SPAIN stays mainly in the plain";
+        let ans4 = text4.match("ain");
+        console.log(ans4);;
+
+        //5 matchAll()
+        let text5 = "I love cats. Cats are very easy to love. Cats are very popular."
+        let ans5 = text5.matchAll("Cats");
+        console.log(ans5);
+    </script>
+</body>
+</html>
