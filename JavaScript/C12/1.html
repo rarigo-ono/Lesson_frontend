@@ -7,30 +7,85 @@
 </head>
 <body>
     <script>
-        //文字列長さ
-        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        let length = text.length;
+        //1 JavaScript 文字列の長さ
+        let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text1.length;
         console.log(length);
 
-        //文字列文字の抽出
-        let text2 = "HELLO WORLD"
-        let char= text2.charAt(0);
-
-        let hello = "Hello World";
-        let char2 = hello.charCodeAt(0);
-
-        let name = "W3schools";
-        let char3 = name.at(2);
-        let letter = name[2];
-
-        console.log(char);
-        console.log(char2);
-        console.log(char3);;
+        //2 文字列文字の抽出
+        //2-1 charAt()
+        let text21 = "HELLO WORLD";
+        let charat = text21.charAt(0);
+        console.log(charat);
+        //2-2 charCodeAt()
+        let text22 = "HELLO WORLD";
+        let charCodeAt = text22.charCodeAt(0);
+        console.log(charCodeAt);
+        //2-3 at()
+        const name23 = "W3Schools";
+        let letter = name23.at(2)
         console.log(letter);
 
+        //3 プロパティアクセス [ ]
         let text3 = "HELLO WORLD";
-        let char4 = text3[0];
-        console.log(char4);
+        let char3 = text3[0];
+        console.log(char3);
+
+        //4 文字列部分の抽出
+        //4-1 文字列スライス()
+        let text41 = "Apple, Banana, Kiwi";
+        let part = text41.slice(7, 13);
+        
+        let part2 = text41.slice(-12);
+        let part3 = text41.slice(-12, -6);
+        console.log(part, part2, part3);
+        //4-2 substring()
+        let str42 = "Apple, Banana, Kiwi";
+        let part42 = str42.substring(7, 13);
+        console.log(part42);
+        //4-3 substr()
+        let str43 = "Apple, Banana, Kiwi";
+        let part43 = str43.substr(7, 6);
+        
+        //5 toUpperCase()
+        let text5 = "Hello World!";
+        let ans5 = text5.toUpperCase();
+        console.log(ans5);
+
+        //6 toLowerCase()
+        let text6 = "Hello World!";
+        let ans6 = text6.toLowerCase();
+        console.log(ans6);
+
+        //7 concat()
+        let text71 = "Hello";
+        let text72 = "World!";
+        let ans7 = text71.concat(" ", text72);
+        console.log(ans7);
+
+        //8 trim()
+        let text8 = "   Hello World!   ";
+        let ans8 = text8.trim();
+        console.log(ans8);
+
+        //9 trimStart()
+        let text9 = "     Hello World!     ";
+        let ans9 = text9.trimStart();
+        console.log(ans9);
+
+        //10 trimEnd()
+        let text10 = "     Hello World!     ";
+        let ans10 = text10.trimEnd();
+        console.log(ans10);
+
+
+        //11padStart()
+        let text11 = "5";
+        let ans11 = text11.padStart(4, "0")
+        console.log(ans11);
+        let ans111 = text11.padStart(4, "x");
+        console.log(ans111);
+
     </script>
 </body>
 </html>
