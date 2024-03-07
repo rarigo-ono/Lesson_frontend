@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12-8</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //1
+        const cars = ["Saab", "Volvo", "BMW"];
+        console.log(cars);
+        document.getElementById("demo").innerHTML = cars;
+        const cars2 = []
+        cars2[0] = "Saab";
+        cars2[1] = "Volvo";
+        cars2[2] = "BMW";
+        console.log(cars2);
+
+        const cars3 = new Array("Saab", "Volvo", "BMW")
+        console.log(cars3);
+
+        //2
+        let car2 = cars[0];
+        console.log(car2);
+
+        //3
+        cars[0] = "Opel";
+        console.log(cars);
+
+        //5
+        console.log(cars.toString());
+    </script>
+</body>
+</html>

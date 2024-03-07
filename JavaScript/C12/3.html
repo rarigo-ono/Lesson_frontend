@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12-3</title>
+</head>
+<body>
+    <h1>JavaScript Template Strings</h1>
+<p>Templates allow variables in strings:</p>
+
+<p id="demo"></p>
+
+<p>Templates are not supported in Internet Explorer.</p>
+
+    <script>
+        //1 構文
+        let text = `Hello World`
+        console.log(`Hello World`);
+
+        //2 引用符
+        console.log(`He's often called "Johnny"`);
+
+        //3 文字列
+        let text3 = 
+        `The quick
+brown fox
+jumps over
+the lazy dog`
+        console.log(text3);
+
+        //4変数置き換え
+        let firstName = "John";
+        let lastName = "Doe";
+        console.log(`Welcome ${firstName}, ${lastName}`);
+
+        //5 式の置き換え
+        let price = 10;
+        let VAT = 0.25;
+        console.log(`Total: ${(price * (1 + VAT)).toFixed(2)}`);
+
+        //6　テンプレート
+        let header = "Template Strings";
+        let tags = ["template strings", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `</ul>`;
+        document.getElementById("demo").innerHTML = html;
+    </script>
+</body>
+</html>
