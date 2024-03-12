@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C13-1</title>
+</head>
+<body>
+    <p id="demo"></p><br>
+    <p id="test"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        Boolean(100) + "<br>" +
+        Boolean(3.14) + "<br>" +
+        Boolean(-15) + "<br>" +
+        Boolean("Hello World") + "<br>" +
+        Boolean('false') + "<br>" +
+        Boolean(1 + 7 + 3.14);
+
+
+        let x = 0;
+        let x2 = -0;
+        let x3 = "";
+        let x4;
+        let x5 = null;
+        let x6 = 10 / "Hello";
+
+        document.getElementById("test").innerHTML =
+        Boolean(x) + "<br>" +
+        Boolean(x2) + "<br>" +
+        Boolean(x3) + "<br>" +
+        Boolean(x4) + "<br>" +
+        Boolean(x5) + "<br>" +
+        Boolean(x6) + "<br>" ;
+    </script>
+</body>
+</html>

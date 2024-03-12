@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B13-2</title>
+
+    <style>
+        
+        img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .black-box {
+            position: relative;
+            z-index: 1;
+            border: 2px solid black;
+            height: 100px;
+            width: 30px;
+        }
+        .gray-box {
+            position: absolute;
+            z-index: 3;
+            background-color: lightgray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+        .green-box {
+            position: absolute;
+            background: lightgreen;
+            width: 35%;
+            left: 2700px;
+            top: -15px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>This is heading</h1>
+    <img src="test.jpg" alt="">
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+    <br>
+
+    <h1>Z-index Example</h1>
+
+    <p>An element with greater stack order is always above an element with a lower stack order.</p>
+
+    <div class="container">
+    <div class="black-box">Black box (z-index: 1)</div>
+    <div class="gray-box">Gray box (z-index: 3)</div>
+    <div class="green-box">Green box (z-index: 2)</div>
+    </div>
+</body>
+</html>
