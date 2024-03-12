@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B13-1+</title>
+    <style>
+        div.static{
+            position: static;
+            border: 3px solid #73ad21;
+        }
+
+        div.relative{
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73ad21;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73ad21;
+            margin: 5px;
+        }
+
+        div.fixed{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            border: 3px solid #73ad21;
+        }
+    </style>
+</head>
+<body>
+    <h2>静的な位置</h2>
+
+    <p>positionプロパティの値staticは、常にページの通常フローに従って配置されます。</p>
+
+    <div class="static">
+    このdiv要素のpositionプロパティの値はstaticです。
+    </div>
+
+    <h2>相対的な位置</h2>
+    <p>positionプロパティの値relativeは、通常の位置を基準にして配置されます。</p>
+    <div class="relative">
+        このdiv要素のpositionプロパティの値はrelativeです。
+    </div>
+
+    <div class="fixed">
+        This div element has position: fixed;
+    </div>
+    <br>
+    <div class="relative">This div element has position: relative;
+        <div class="absolute">This div element has position: absolute;</div>
+    </div>
+</body>
+</html>
