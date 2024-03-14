@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C13-6</title>
+</head>
+<body>
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const person = {fname:"John", lname:"Doe", age:25};
+        
+        let txt = "";
+        for (let x in person){
+            txt += person[x] + " ";
+        }
+
+        console.log(txt);
+    </script>
+</body>
+</html>
