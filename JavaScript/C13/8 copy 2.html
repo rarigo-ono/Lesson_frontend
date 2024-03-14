@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C13-8</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text = "";
+        let i = 10;
+
+        while(i > 0) {
+            text += "<br> 出力値は " + i + " です。";
+            i--;
+        };
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>
