@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C13-11</title>
+</head>
+<body>
+    <h1>map()の使い方</h1>
+    <h2>Mapオブジェクトの作成と初期化</h2>
+    <script>
+        const mapObj = new  Map();
+        console.log(mapObj);
+    </script>
+    <h2>値を指定して初期化</h2>
+    <script>
+        const mapObj2 = new Map([
+            ["key1", 1],
+            ["key2", 2]
+        ]);
+        console.log(mapObj2);
+    </script>
+    <hr>
+    <h2>要素の追加と取得</h2>
+    <script>
+        var mapAdd = new Map();
+        mapAdd.set("key1", "value1");
+        console.log(mapAdd);
+        console.log(mapAdd.get("key1"));
+    </script>
+
+    
+</body>
+</html>

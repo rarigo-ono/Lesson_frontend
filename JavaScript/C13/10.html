@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C13-10</title>
+</head>
+<body>
+    <h1>Setオブジェクト</h1>
+    <p>学習日　2024/03/15</p>
+    <hr>
+    <h2>Setオブジェクトとは</h2>
+    ES2015から導入された、重複した値がないコレクション
+    <ul>
+        <li>値が一意であることが保証される</li>
+        <li>順序は持たない、インデックスでアクセス不可</li>
+    </ul>
+    <hr>
+    <h3>Setの作成</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set(["value1", "value2", "value3"]);
+        console.log(set);
+        console.log(set.size);
+    </script>
+    <hr>
+    <h3>値の追加</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set();
+
+        set.add("apple");
+        set.add("banana");
+
+        console.log(set);
+        console.log(set.size);
+    </script>
+
+    <hr>
+    <h3>値の削除</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set(["value1", "value2", "value3"]);
+        console.log("削除前の値のサイズ", set.size);
+
+        set.delete("value3");
+        console.log("削除後の値のサイズ", set.size);
+    </script>
+    <hr>
+    <h3>値の全削除</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set(["value1", "value2", "value3"]);
+        console.log("削除前の値のサイズ", set.size);
+
+        set.clear("value3");
+        console.log("全削除後の値のサイズ", set.size);
+    </script>
+    <hr>
+
+    <h3>値の存在するか確認(has)</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set(["value1", "value2", "value3"]);
+        console.log(set.has("value1"));
+        console.log(set.has("value5"));
+    </script>
+    <hr>
+    <h3>反復処理 for...of</h3>
+    ※console.logにて表示
+    <script>
+        var set = new Set();
+
+        set.add("apple");
+        set.add("banana");
+        set.add("melon");
+
+        for(var value of set){
+            console.log(value);
+        }
+    </script>
+    <hr>
+</body>
+</html>
