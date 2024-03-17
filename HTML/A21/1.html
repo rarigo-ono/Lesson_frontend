@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-1</title>
+    <style>
+        form{
+            font-size: 21px;
+        }
+    </style>
+</head>
+<body>
+    <h2>フォームの構文例</h2>
+    <form action="/action_page.php">
+        <label for="fname">姓</label>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">名</label>
+        <input type="text" id="lname" name="lname" value="Dor"><br><br>
+        <input type="submit" value="送信">
+
+        <p>「送信」ボタンをクリックすると、フォームに入力されてデータは
+            「/action_page.php」というページに送られます。
+        </p>
+    </form>
+    <hr>
+    <h3>テキスト入力&lt;input type="text"&gt;</h3>
+    <form>
+        <label for="itemname">製品名</label>
+        <input type="text" id="itemname" name="itemname"><br>
+        <label for="count">数　量</label>
+        <input type="text" id="count0" name="count"><br>
+    </form>
+    <hr>
+    <h3>ラジオボタン</h3>
+    <p>発注する製品を選択してください。</p>
+    <form>
+        <input type="checkbox" id="f1" name="" value="f1">
+        <label for="checkbox">雪止金具アングル用　神通F-1</label><br>
+        <input type="checkbox" id="dobu" name="dobu" value="dobu">
+        <label for="dobu">溶融亜鉛メッキ</label>
+        <input type="checkbox" id="sus304" name="sus304" value="sus304">
+        <label for="sus304">ステンレス</label><br>
+        
+        <label for="count">必要数量：</label>
+        <input type="text" id="count" name="count">
+    </form>
+    <hr>
+    <h3>チェックボックス</h3>
+    <form>
+        <input type="radio" id="f1" name="snowstop" value="f1">
+        <label for="f1">神通Ｆ－１</label><br>
+        <input type="radio" id="ot-5" name="snowstop" value="ot-5">
+        <label for="ot-5">ワンタッチバレーガードＯＴ－５</label><br>
+        <input type="radio" id="wing2" name="snowstop" value="wing2">
+        <label for="wing2">スーパーウィングⅡ型</label><br><br>
+        <label for="order">数量:</label>
+        <input type="text" id="order" name="order">個<br>
+
+        <input type="submit" value="発注する" style="font-size: 18px;">
+    </form>
+</body>
+</html>
