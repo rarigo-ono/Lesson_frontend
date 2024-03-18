@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_errors</title>
+    <style>
+        code {
+            color: tomato;
+            font-size: x-large;
+            font-weight: bold;
+            border: solid 1px tomato;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>例外処理</h1>
+    
+    <h2>try&catch</h2>
+    <p><code>try</code> を使用すると、実行中にエラーをテストコードブロックを定義できる。</p>
+    <p><code>catch</code> を使用すると、<code>try</code> エラーが発生した場合に実行されるコードのブロックを定義できる。
+    </p>
+    <p>エラーが発生すると、
+        通常は停止し、エラーメッセージが生成される。
+    </p>
+    <p>専門用語だと、「例外をスローする。」</p>
+
+    <p>5から10までの数値を入力してください。</p>
+    <input type="demo" type="text">
+    <button type="button" onclick="myFunction()">値を入力</button>
+    <p id="p01"></p>
+
+    <script>
+
+        function myFunction(){
+            const message = document.getElementById("p01");
+            message.innerHTML = "";
+            let x = document.getElementById("demo").value;
+            try {
+                if(x.trim() == "") throw "empty";
+                if(isNaN(x)) throw "not a number";
+                x = Number(x);
+                if(x < 5) throw "too low";
+                if(x > 10) throw "too high";
+            }
+            catch(err){
+                message.innerHTML = "Input is " + err;
+            }
+            finally {
+                document.getElementById("demo").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

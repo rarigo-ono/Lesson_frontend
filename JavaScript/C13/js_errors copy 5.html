@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_errors</title>
+    <style>
+        code {
+            color: tomato;
+            font-size: x-large;
+            font-weight: bold;
+            border: solid 1px tomato;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>例外処理</h1>
+    
+    <h2>タイプエラー</h2>
+    <p id="demo"></p>
+    <script>
+        let num = 1;
+        try {
+            num.toUpperCase();
+        }
+        catch(err) {
+            document.getElementById("demo").innerHTML = err.name;
+        }
+    </script>
+</body>
+</html>
