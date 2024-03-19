@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A31</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #d3d3d3;"></canvas>
+    <br>
+    <canvas id="myText" width="200" height="100" style="border: 1px solid #d3d3d3;"></canvas>
+    <br>
+    <canvas id="myGra" width="200" height="100" style="border: 1px solid #d3d3d3;"></canvas>
+    <br>
+    <canvas id="testE" width="200" height="100" style="border: 1px solid #d3d3d3;"></canvas>
+
+
+
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(90,50,40,0,2*Math.PI);
+        ctx.stroke();
+
+        var d = document.getElementById("myText");
+        var dtx = d.getContext("2d");
+        dtx.font = "30px Arial";
+        dtx.strokeText("Hello World", 10, 50);
+
+        var e = document.getElementById("myGra");
+        var etx = e.getContext("2d");
+
+        
+        //グラデーションを作成
+        var grd = etx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        //グラデーションをボックスを埋める
+        etx.fillStyle = grd;
+        etx.fillRect(10,10,150,80);
+        
+        
+
+        var f = document.getElementById("testE");
+        var ftx = f.getContext("2D");
+
+        var grd = ftx.createLinearGradient(75,50,5,90,60,100);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        ftx.fillStyle = grd;
+        ftx.fillRect(10,10,150,80);
+    </script>
+</body>
+</html>
