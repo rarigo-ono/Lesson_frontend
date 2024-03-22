@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-2</title>
+</head>
+<body>
+    <h1>ホスティング</h1>
+    <p>変数は宣言される前に使用可能</p>
+    <p id="demo1"></p>
+    <script>
+        x = 5;
+        elem = document.getElementById("demo1");
+        elem.innerHTML = x;
+
+        var x;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        var x;
+        x = 5;
+
+        elem = document.getElementById("demo2");
+        elem.innerHTML = x;
+    </script>
+
+    <p id="demo3"></p>
+    <script>
+        try{
+            carName = "Saab";
+            let carName = "Vlovo";
+        }
+        catch(err){
+            document.getElementById("demo3").innerHTML = err;
+        }
+    </script>
+</body>
+</html>

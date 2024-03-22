@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-7</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>モジュール</h1>
+    <p>モジュールを使用すると、コードを個別のファイルに分割できる。</p>
+    <p>メリット：コードベースの保守が容易になる。</p>
+    <p><code>import</code> でステートメントして外部ファイルを使用する。</p>
+    <p><code>type='module'</code> は&lt;script&gt;タグ内に依存する。</p>
+
+    <h2>importの方法</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script type="module">
+        import {name, age} from "./person.js";
+        import mesagge from "./message.js";
+
+        let text = "My name is " + name + ", I am " + age + ".";
+
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo2").innerHTML = mesagge();
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-9</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>デバッグ</h1>
+    <h3>コードのデバッグ</h3>
+    <p>
+        プログラミングコードには構文エラーや論理エラーが含まれる場合があります。<br>
+        エラーが含まれていると何も起こらず、エラーメッセージの表示も無く、
+        エラーの場所も示されません。<br>
+        コード内のエラーを検索又は修正することを<strong>コードデバッグ</strong>と言います。      
+    </p>
+    <h3>デバッガー</h3>
+    <p>
+        デバッグは簡単ではありませんが、最新のブラウザにはすべてJavaScriptデバッガーが
+        組み込まれています。<br>
+        組み込みデバッガーは、ユーザーにエラーを報告する機能を備えています。<br>
+        組み込みデバッガーを使って、ブレークポインを設定し、コード実行中に変数を調べたり
+        できます。
+    </p>
+    <h3>console.log()メソッド</h3>
+    <p>デバッガーウィンドウにJavaScript値を表示するのに使用します。</p>
+    <h3>ブレークポイントの設定</h3>
+    <p>ブレークポイントでJavaScriptの実行を停止し、JavaScriptの値を検査できます。</p>
+    <h3>デバッガーのキーワード</h3>
+    <p>キーワード<code> debuggr </code>は、JavaScriptの実行を停止して、
+    デバッグ関数を呼び出します。</p>
+    <p id="demo"></p>
+    <script>
+        let x = 15 * 5;
+        debugger;
+        document.getElementById("demo").innerHTML = x;
+    </script>
+    <h3>主要ブラウザのデバッグツール</h3>
+</body>
+</html>

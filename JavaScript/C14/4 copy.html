@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-4</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .warning{
+            background-color: rgb(222, 222, 30);
+            color: red;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>thisとは何か？</h1>
+    <p>thisオブジェクトがどのように呼び出されるか確認する。</p>
+    <p>thisオブジェクトは、使用方法に応じてさまざまなオブジェクトを指す。</p>
+    <ul>
+        <li>オブジェクトメソッドでは、オブジェクトthisを指す。</li>
+        <li>単独では、グローバルオブジェクトthisを指す。</li>
+        <li>関数内では、グローバルオブジェクトthisを指す。</li>
+        <li>イベントでは、イベントを受信した要素thisを指す。</li>
+    </ul>
+    <div class="warning">
+        <code>this</code>は、変数ではない。キーワードなので値の変更は不可。
+    </div>
+    <h2>オブジェクトメソッドで使用する場合</h2>
+    <p id="thisObj"></p>
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function(){
+                return this.firstName + " " + 
+                this.lastName;
+            }
+        };
+
+        document.getElementById("thisObj").innerHTML = person.fullName();
+    </script>
+
+    <h2>単独で使用</h2>
+    <p>単独で使用する場合は、グローバルオブジェクトを指す。</p>
+    <p id="thisSingle"></p>
+    <script>
+        let x = this;
+        document.getElementById("thisSingle").innerHTML = x;
+    </script>
+
+    <p>厳密モードでも同じ</p>
+    <p id="thisStrict"></p>
+    <script>
+        "use strict";
+        let y = this;
+        document.getElementById("thisStrict").innerHTML = y;
+    </script>
+
+    <h2>関数内で使用</h2>
+    <p>関数内で使用する場合は、グローバルオブジェクトを指す。</p>
+    <p id="thisFunc"></p>
+    <script>
+        document.getElementById("thisFunc").innerHTML = myFunction();
+
+        function myFunction() {
+            return this;
+        }
+    </script>
+
+    <p>厳密モードで関数内で使用する場合は、<code>undefined</code>となる。</p>
+    <p id="thisStrictFunc"></p>
+    <script>
+        "use strict";
+        document.getElementById("thisStrictFunc").innerHTML = myFunction();
+
+        function myFunction() {
+            return this;
+        }
+    </script>
+
+    <h2>HTMLイベントハンドラーでは、thisイベントを受信したHTML要素を参照する。</h2>
+    <button onclick="this.style.diplay='none'">Click to Remove Me!</button>
+</body>
+</html>

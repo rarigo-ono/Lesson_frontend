@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-10</title>
+    <style>
+        code{
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>コーディング規約</h1>
+    <ul>
+        <li>変数と関数の命名規則と宣言規則</li>
+        <li>空白、インデント、コメントの使用に関するルール</li>
+        <li>プログラミングの実践と原則</li>
+    </ul>
+    <p>上記を規約によって<strong>品質向上</strong>に繋がります。</p>
+    <ul>
+        <li>コードの可読性</li>
+        <li>メンテナンスが容易</li>
+    </ul>
+    <h3>変数名</h3>
+    <h4>キャメルケースを用いる</h4>
+    <p>firstName lastName fullPrice snowItemList</p>
+    <h3>演算子の周囲のスペース</h3>
+    <p>( = + - * / )の前後とカンマ(, )の後ろには必ずスペースを入れる</p>
+    <h3>コードのインデント</h3>
+    <p>常に2つ以上のスペースを使用する</p>
+
+    <h3>ステートメントのルール</h3>
+    <p>単純なステートメントは常にセミコロン<code> ; </code>で終了する。</p>
+    <script>
+        const cars = ["Volvo", "Saab", "Fiat"];
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+    </script>
+    <p>複雑なステートメントの一般規則</p>
+    <ul>
+        <li>最初の行の末尾に左括弧を置く</li>
+        <li>左括弧の前にスペースを1つ入れる。</li>
+        <li>先頭にスペースを入れずに、閉じ括弧を新しい行に置く</li>
+        <li>複雑なステートメントはセミコロンで終了しない。</li>
+    </ul>
+
+
+    <script>
+        function toCelsius(fahrenheit) {
+          return (5 / 9) * (fahrenheit - 32);
+        }
+
+        for (let i = 0; i < 5; i++) {
+            x += i;
+        }
+        if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+    </script>
+
+    <h3>オブジェクトのルール</h3>
+    <ul>
+        <li>左括弧をオブジェクト名と同じ行に配置する。</li>
+        <li>各プロパティとその値の間には、コロンとスペース1つを配置する。</li>
+        <li>数値ではなく文字列値は引用符で囲む。</li>
+        <li>最後のプロパティと値のペアの後にカンマを追加する。</li>
+        <li>先頭にスペースを入れずに、閉じ括弧を新しい行に配置する。</li>
+        <li>オブジェクト定義は常にセミコロンで終了する。</li>
+    </ul>
+
+    <script>
+        const person = {
+            firstName: "John", 
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+    </script>
+
+</body>
+</html>

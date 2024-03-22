@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-8</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSONオブジェクトからJavaScriptオブジェクトへの変換</h1>
+    <p id="demo"></p>
+    <script>
+        let text =
+        '{"employees":[' +
+        '{"firstName":"john","lastName":"Doe"},' + 
+        '{"firstName":"Anna","lastName":"Smith"},' + 
+        '{"firstName":"Peter","lastName":"Jones"}]}'
+
+        const obj = JSON.parse(text);
+        document.getElementById("demo").innerHTML =
+        obj.employees[1].firstName + " " +
+        obj.employees[1].lastName;
+    </script>
+</body>
+</html>

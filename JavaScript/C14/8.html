@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-8</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON</h1>
+    <p>JSONは、データの保存や転送をするための形式</p>
+    <p>データがサーバーからWebページに送信されるときによく使用する。</p>
+    <h2>JSONとは？</h2>
+    <ul>
+        <li>Java Script Object Notaiion の略</li>
+        <li>軽量のデータ交換形式</li>
+        <li>言語に依存しない</li>
+        <li>「自己記述型」で理解しやすい</li>
+    </ul>
+    <h2>JSONの例</h2>
+    <p>{<br>
+    "employees":[<br>
+    　{"firstName":"john","lastName":"Doe"},
+    {"firstName":"Anna","lastName":"Smith"},
+    {"firstName":"Peter","lastName":"Jones"}<br>
+    ]<br>
+    }<br>
+    </p>
+    <h3>JSON形式はJavaScriptオブジェクトとして評価される</h3>
+    <p>JSON形式は、JavaScriptオブジェクトを作成するコードと構文的に同じである。</p>
+    <p>この類似性により、JavaScriptプログラムはJSONデータをネイティブJavaScriptオブジェクト
+        に簡単に変換できる。
+    </p>
+    <h3>JSON構文ルール</h3>
+    <ul>
+        <li>名前と値のペアのデータである。</li>
+        <li>データはカンマ<code> , </code>で区切られる</li>
+        <li>中括弧はオブジェクトを保持する。</li>
+        <li>角括弧は配列を保持する。</li>
+    </ul>
+
+    <h3>名前と値</h3>
+    <p>名前と値のペアは、フィールド名(二重引用符で囲んだ)、
+        コロン、値で構成される。
+    </p>
+    <p>"firstName":"John"</p>
+    <h3>オブジェクト</h3>
+    <p>オブジェクトは中括弧内に記述する。</p>
+    <p>JavaScript同様、複数の名前と値を含めることができる。</p>
+    <p>{"firstName":"John", "lastName":"Doe"}</p>
+    <h3>配列</h3>
+    <p>配列は、角括弧内に記述する。</p>
+    <p>"employees":[<br>
+    {"firstName":"John","lastName":"Doe"},
+    {"firstName":"Azuki","lastName":"Ono"},
+    {"firstName":"Keisuke","lastName":"Ono"}<br>
+    ]</p>
+    
+        
+</body>
+</html>

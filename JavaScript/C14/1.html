@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-1</title>
+</head>
+<body>
+    <p id="demo1"></p><br>
+    <p id="demo2"></p>
+    <script>
+        myFunction();
+
+        function myFunction(){
+            let carName = "Volbo";
+            document.getElementById("demo1").innerHTML = typeof carName +
+            " " + carName;
+        }
+
+        document.getElementById("demo2"),innerHTML = typeof carName;
+
+    </script>
+
+    <p id="demo3"></p>
+        
+    <script>
+        let itemName = "Wフレーム";
+        callItem();
+
+        function callItem(){
+            document.getElementById("demo3").innerHTML = itemName;
+        }
+    </script>
+    
+    <p id="demo4"></p>
+    <script>
+        myItem();
+        document.getElementById("demo4").innerHTML = 
+        "I can display " + myGetItem;
+
+        function myItem(){
+            myGetItem = "ゲーミングパソコン"
+        }
+    </script>
+
+    <p id="demo5"></p>
+    <script>
+        var stayArea = "長野県"
+
+        document.getElementById("demo5").innerHTML = 
+        "私は今、" + window.stayArea + "に滞在しています。";
+    </script>
+    
+</body>
+</html>

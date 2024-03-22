@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-6</title>
+</head>
+<body>
+    <h1>クラス</h1>
+    <h2>クラスの構文</h2>
+    <p>クラスはオブジェクトではない</p>
+    <p>あくまでオブジェクトのテンプレート</p>
+    <h2>クラスの使い方</h2>
+    <p id="demo"></p>
+    <script>
+        class Car {
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        const myCar1 = new Car("Suzuki", 2022);
+        const myCar2 = new Car("Audi", 2019);
+
+        document.getElementById("demo").innerHTML =
+        myCar1.name + " " + myCar2.name;
+    </script>
+
+    <h2>コンストラクターメソッド</h2>
+    <ul>
+        <li>constructorという正確な名前が必要</li>
+        <li>新しく作成されると自動的に実行される</li>
+        <li>オブジェクトのプロパティを初期化するために使用する。</li>
+        <li>定義しない場合は、空のコンストラクターメソッドが追加される。</li>
+    </ul>
+
+    <h2>クラスメソッド</h2>
+    <p id="demo2"></p>
+    <script>
+        class Cars{
+            constructor(name, year){
+                this.name = name;
+                this.year = year;
+            }
+
+            age(){
+                const date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+
+        const myCar = new Cars("Ford", 2014);
+        document.getElementById("demo2").innerHTML = 
+        "My car is " + myCar.age() + " years old.";
+    </script>
+
+
+</body>
+</html>

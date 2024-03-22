@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-5</title>
+    <style>
+        code {
+            color: red;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>アロー関数</h1>
+    <p>アロー関数はES6で導入された。</p>
+    <p>短い関数構文で作成ができるようになった。</p>
+    <p id="arrowFunc"></p>
+    <script>
+        let myFunction = (a, b) => a * b;
+        document.getElementById("arrowFunc").innerHTML = myFunction(3, 6);
+    </script>
+    
+    <h2>基本の書き方</h2>
+    <p id="demo"></p>
+    <script>
+        let hello = "";//空の変数作成
+        hello = () => {
+            return "アロー関数の作成方法へようこそ！";
+        };
+
+        document.getElementById('demo').innerHTML = hello();
+
+    </script>
+
+    <h2>デフォルトの戻り値を設定するともっと短くなる。</h2>
+    <p id="demo2"></p>
+    <script>
+        hello = () => "デフォルトの戻り値です。"
+        document.getElementById("demo2").innerHTML = hello();
+    </script>
+    
+    <h2><code>this</code>はどうなる？</h2>
+    <p>通常の関数では、<code>this</code>キーワードは関数を呼び出すオブジェクト
+    （ウィンドウ、ドキュメント、ボタンなど）を表す。</p>
+    <p>アロー関数では、<code>this</code>
+        キーワードは常にアロー関数を定義したオブジェクトを表す。</p>
+    <button id="btn">押してみてください</button>
+    <p id="demo3"></p>
+    <script>
+        let test = "";
+        test = function(){
+            document.getElementById("demo3").innerHTML += this;
+        }
+
+        window.addEventListener("load", test);
+
+        document.getElementById("btn").addEventListener("click", test);
+    </script>
+</body>
+</html>

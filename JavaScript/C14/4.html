@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C14-4</title>
+</head>
+<body>
+    <h1>thisキーワード</h1>
+    <p>thisが所属している関数を実行するオブジェクトのこと</p>
+    <h2>パターン①</h2>
+    <p>「メソッド」の場合、thisは「所属しているオブジェクト」そのものを指す</p>
+    <p id="this1"></p>
+    <script>
+        const manga = {
+            title: "Fullmetal Alchemist",
+            read(){
+                console.log(this);
+            }
+        }
+        manga.close = function(){
+            console.log(this);
+        }
+        manga.close();
+    </script>
+    <h2>パターン②</h2>
+    <p>通常の関数（オブジェクトの中に存在していない関数）の場合、
+        グローバルオブジェクトである「ブラウザ内のWidowオブジェクト」
+        ＆「node内のグローバルオブジェクト」を指す。
+    </p>
+    <p id="demo1"></p>
+    <script>
+        const person = {
+            firstName : "John",
+            lastName : "Doe",
+            id : 5566,
+            fullName : function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("demo1").innerHTML = person.fullName();
+    </script>
+
+    <script>
+        const manga = {
+            title: "Fullmetal Alchemist",
+            read(){
+                console.log(this);
+            }
+        }
+
+        function readManga(){
+            console.log(this);
+        }
+
+        readManga();
+    </script>
+    
+
+</body>
+</html>

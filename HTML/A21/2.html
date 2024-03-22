@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-2</title>
+    <style>
+        code{
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>値の属性</h1>
+    <p>input <code>value</code> 属性は、入力フィールドの初期値を指定できる。</p>
+    <h2>読み取り専用属性</h2>
+    <p>input <code>readonly</code> 属性は、読み取り専用に指定できる。</p>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" readonly><br>
+    </form>
+    <h2>無効化された属性</h2>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" disabled><br>
+    </form>
+    <h2>サイズ属性</h2>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John" size="50"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br>
+    </form>
+    <h2>maxlength属性</h2>
+    <form action="">
+        
+        <label for="pin">PIN :</label><br>
+        <input type="text" id="pin" name="pin" maxlength="4" size="4">
+    </form>
+
+    <h2>複数の属性</h2>
+    <label for="files">Select files:</label><br>
+    <input type="file" id="files" name="files" multiple>
+    <h2>プレースホルダー属性</h2>
+    <label for="phone">電話番号を入力：</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678"
+    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+    <h2>必須の属性</h2>
+    <form action="">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" required><br>
+    </form>
+
+    
+</body>
+</html>
