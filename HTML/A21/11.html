@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-1</title>
+    <style>
+        .section {
+            background-color: rgb(226, 222, 222);
+            padding: 5px;
+        }
+        code {
+            color: red;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTMLフォーム</h1>
+    <p>フォームは、主にユーザーが入力したデータの収集に使用します。
+        収集されたデータのほとんどは、サーバー処理のために送信されます。</p>
+    <div class="section">
+        <h2>例</h2>
+        <form action="#">
+            <label for="fname">First name</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <div class="section">
+        <h2>&lt;form&gt;要素</h2>
+        <p><code>&lt;form&gt;</code> は、ユーザー入力用のフォームを作成します。</p>
+    </div>
+    <br>
+    <div class="section">
+        <h2>&lt;input&gt;要素</h2>
+        <p><code>&lt;input&gt;</code> は、最も使用します。</p>
+        <p>入力タイプ(属性)に応じて、さまざまな方法があります。</p>
+    </div>
+
+    <br>
+    <div class="section">
+        <h2>テキストフィールド <code>&lt;input type="text"&gt;</code></h2>
+        <p><code>&lt;input&gt;</code> は、最も使用します。</p>
+        <p>入力タイプ(属性)に応じて、さまざまな方法があります。</p>
+        <form action="#">
+            <label for="itemname">製品名</label>
+            <input type="text" id="itemname" name="itemname"><br>
+            <label for="itemwork">用　途</label>
+            <input type="text" id="itemwork" name="itemwork"><br>
+        </form>
+    </div>
+
+    <br>
+    <div class="section">
+        <h2>ラベル <code>&lt;label&gt;</code></h2>
+        <p><code>&lt;label&gt;</code> は、入力要素をしっかりと判断できるために使用します。</p>
+        <p>また、要素が非常に小さい領域（チェックボックスやラジオボタンなど）をクリックするのが難しい場合など使用します。</p>
+        <p>タグの属性は、<code>&lt;label&gt;</code>のforと<code>&lt;input&gt;</code>のidを等しくします。</p>
+        <form action="#">
+            <label for="itemname">製品名</label>
+            <input type="text" id="itemname" name="itemname"><br>
+            <label for="itemwork">用　途</label>
+            <input type="text" id="itemwork" name="itemwork"><br>
+        </form>
+    </div>
+
+    <br>
+    <div class="section">
+        <h2>ラジオボタン <code>&lt;input type="radio"&gt;</code></h2>
+        <p><code>&lt;input type="radio"&gt;</code> は、選択肢から1つを選択できます。</p>
+        <form action="#">
+            <input type="radio" id="snowstop" name="item" value="雪止金具">
+            <label for="snowstop">雪止金具</label><br>
+            <input type="radio" id="reroof" name="item" value="改修金具">
+            <label for="reroof">改修金具</label><br>
+            <input type="radio" id="solar" name="item" value="太陽光架台金具">
+            <label for="solar">太陽光架台金具</label><br>
+        </form>
+    </div>
+    
+    <br>
+    <div class="section">
+        <h2>チェックボックス</h2>
+        <p>選択肢から複数の項目を選択できます。</p>
+        <h3>通勤方法を選択してください:</h3>
+        <form action="">
+            <input type="checkbox" id="commute1" name="commute1" value="Bike">
+            <label for="commute1">バイク</label><br>
+            <input type="checkbox" id="commute2" name="commute2" value="Car">
+            <label for="commute2">車</label><br>
+            <input type="checkbox" id="commute3" name="commute3" value="Train">
+            <label for="commute3">電車</label>
+        </form>
+    </div>
+
+    <br>
+    <div class="section">
+        <h2>送信ボタン</h2>
+        <input type="checkbox" id="commute1" name="commute1" value="Bike">
+        <label for="commute1">バイク</label>
+        <input type="checkbox" id="commute2" name="commute2" value="Car">
+        <label for="commute2">車</label>
+        <input type="checkbox" id="commute3" name="commute3" value="Train">
+        <label for="commute3">電車</label><br>
+        <input type="submit" value="回答する">
+    </div>
+</body>
+</html>
