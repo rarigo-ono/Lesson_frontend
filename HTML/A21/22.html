@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-2</title>
+</head>
+<body>
+    <h1>フォーム属性</h1>
+    <hr>
+    <h2>アクション属性</h2>
+    <p>フォーム送信時に実行されるアクションを指定します。</p>
+    <p>通常は、サーバー上のファイルに送信されます。</p>
+    <hr>
+    <h2>ターゲット属性</h2>
+    <p>送信後に受信した応答を表示します。</p>
+    <ul>
+        <li>_blank  新しいウィンドウまたはタブに表示されます。</li>
+        <li>_self   現在のウィンドウに表示されます。</li>
+        <li>_parent 親フレームに表示されます。</li>
+        <li>_top    ウィンドウの本文全体に表示されます。</li>
+        <li>framename
+                名前付きのiframeに表示されます。
+        </li>
+    </ul>
+    <hr>
+    <h2>Method属性</h2>
+    <p>フォームデータを送信するときに使用します。</p>
+    <p>フォームデータはURL変数です。</p>
+    <p>既定のフォームデータのHTTPメソッドはGETです。</p>
+    <form action="/action_page.php" target="_blank" method="get">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br>
+        <input type="submit" value="送信">
+    </form>
+    <hr>
+    <h2>オートコンプリート属性</h2>
+    <p>オンの場合は、以前に入力した値に基づいて値を自動的に保管できる。</p>
+    <form action="/action_page.php" autocomplete="on">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="emali"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <h2>Novalidate属性</h2>
+    <p>属性はブール属性です。</p>
+    <p>ブール属性が存在する場合は、送信時に検証されないことを指定できる。</p>
+    <p>つまり、通常時は検証され何らかのエラー情報や補足情報をユーザーに提案できることを省略できる。</p>
+    <form action="/action_page.php" novalidate>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit">
+    </form>
+    <hr>
+</body>
+</html>

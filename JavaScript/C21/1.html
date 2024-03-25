@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-1</title>
+</head>
+<body>
+    <h2>JavaScript　変数</h2>
+    <p id="demo"></p>
+    <script>
+        //変数を表示する
+        let person = "John Doe";
+        document.getElementById("demo").innerHTML = person;
+    </script>
+
+    <h2>JavaScript オブジェクト</h2>
+    <p id="obj"></p>
+    <script>
+        let personObj = {
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "brown"
+        }
+
+        document.getElementById("obj").innerHTML =
+        personObj.firstName + " " + personObj.lastName + "<br>" +
+        "年齢: " + personObj.age + " 瞳の色: " + personObj.eyeColor; 
+    </script>
+
+    <h2>オブジェクトの様々な作成方法</h2>
+    <p id="empty"></p>
+    <script>
+        const emptyObj = {};
+        emptyObj.firstName = "Azuki";
+        emptyObj.lastName = "Ono";
+        emptyObj.age = 12;
+        emptyObj.type = "poodle";
+
+        document.getElementById("empty").innerHTML =
+        emptyObj.lastName + " " + emptyObj.firstName + "<br>" +
+        emptyObj.age + "<br>" +
+        emptyObj.type
+
+
+    </script>
+</body>
+</html>

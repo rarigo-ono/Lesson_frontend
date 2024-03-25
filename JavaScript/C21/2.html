@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-2</title>
+</head>
+<body>
+    <h1>プロパティへのアクセス方法</h1>
+    <h2>1   例1</h2>
+    <p id="demo"></p>
+    <script>
+        const person ={
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "blue"
+        };
+
+        document.getElementById("demo").innerHTML = 
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+    <h2>2   例2</h2>
+    <p id="demo2"></p>
+    <script>
+        const person2 ={
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "blue"
+        };
+        document.getElementById("demo2").innerHTML = 
+        person2["firstName"] + " is " + person2["age"] + " years old.";
+    </script>
+    <h2>3   ループでのアクセス</h2>
+    <p id="demo3"></p>
+    <script>
+        const person3 = {
+            fname : "John",
+            lname : "Doe",
+            age : 25
+        };
+
+        let txt = "";
+        for(let x in person3) {
+            txt += person3[x] + " ";
+        }
+        document.getElementById("demo3").innerHTML = txt;
+    </script>
+    <h2>4   新しいプロパティの追加</h2>
+    <h2>5   プロパティの削除</h2>
+    <h2>6   入れ子オブジェクト</h2>
+    <h2>7   入れ子になった配列とオブジェクト</h2>
+    <h2>8   プロパティ属性</h2>
+    <h2>9   プロトタイプのプロパティ</h2>
+</body>
+</html>
