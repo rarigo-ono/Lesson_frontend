@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-6</title>
+</head>
+<body>
+    <h1>JavaScriptコンストラクター</h1>
+    <p>コンストラクタ関数には、最初の文字を大文字で指定することを推奨します。</p>
+    <h2>オブジェクトタイプ（ブループリント）（クラス）</h2>
+    <p>同じタイプのオブジェクトを多数作成するための「設計図」が必要な場合にコンストラクタ―は重宝します。</p>
+    <p id="demo"></p>
+    <script>
+        //設計図作成
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        //2つのオブジェクトを作成
+        const myFather = new Person("John", "Doe", 50, "blue");
+        const myMother = new Person("Sally", "Rally", 48, "green");
+
+        //表示してみる
+        document.getElementById("demo").innerHTML = 
+        "My father is " + myFather.age + ". My mother is " + myMother.age;
+
+    </script>
+    <h2>thisとは何ですか？</h2>
+    <h2>プロパティの追加</h2>
+    <p id="demo3"></p>
+    <script>
+        myFather.nationality = "English";
+
+        document.getElementById("demo3").innerHTML = 
+        "My father is " + myFather.nationality;
+    </script>
+</body>
+</html>

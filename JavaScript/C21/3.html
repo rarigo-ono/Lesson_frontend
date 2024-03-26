@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-3</title>
+</head>
+<body>
+    <h1>オブジェクトメソッド</h1>
+    
+    <h2>thisとは？</h2>
+    <p>thisはオブジェクトを参照します。</p>
+    <p>どのように呼び出されるかによってオブジェクト内の参照先が異なります。</p>
+    <ul>
+        <li>オブジェクトメソッドでは、オブジェクトを参照します。</li>
+        <li>単独の場合は、グローバルオブジェクトを参照します。</li>
+        <li>関数内では、グローバルオブジェクトを参照します。</li>
+        <li>関数では、厳密モードです。</li>
+        <li>イベントでは、イベントを受信した要素を指します。</li>
+        <li>その他、任意のオブジェクトも参照できます。</li>
+    </ul>
+    <h2>メソッド</h2>
+
+    <h2>メソッドへのアクセス</h2>
+    <p id="demo3"></p>
+    <script>
+        const person = {
+            firstName : "John",
+            lastName : "Doe",
+            id : 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("demo3").innerHTML = person.fullName() + "<br>" + person.fullName;
+    </script>
+    <h2>メソッドの追加</h2>
+    <p id="demo4"></p>
+    <script>
+        const addPerson = {
+            firstName : "John",
+            lastName : "Doe",
+            id : 5566,
+        };
+        addPerson.number = 1234;
+        addPerson.name = function() {
+            return this.firstName + " " + this.lastName;
+        };
+
+        addPerson.globalID = function() {
+            return this.id + " " + this.number;
+        }
+
+        document.getElementById("demo4").innerHTML = "My father is " + addPerson.name() + 
+        "<br>" + addPerson.globalID();
+    </script>
+
+    <h2>組み込みメソッドの使用</h2>
+    <p id="demo5"></p>
+    <script>
+        const newPerson = {
+            firstName : "John",
+            lastName : "Doe",
+            id : 5566,
+        };
+
+        newPerson.name = function(){
+            return (this.lastName + " " + this.firstName).toUpperCase();
+        }
+
+        document.getElementById("demo5").innerHTML = newPerson.name();
+    </script>
+</body>
+</html>

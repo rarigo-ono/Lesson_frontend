@@ -48,9 +48,81 @@
         document.getElementById("demo3").innerHTML = txt;
     </script>
     <h2>4   新しいプロパティの追加</h2>
+    <p id="demo4"></p>
+    <script>
+        const newPerson = {
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "blue"
+        };
+
+        newPerson.nationality = "English";
+        newPerson.ITspec = "specialist"
+        document.getElementById("demo4").innerHTML = 
+        newPerson.firstName + " is " + newPerson.nationality + ".<br>" +
+        "He is JavaScript " + newPerson.ITspec;
+    </script>
     <h2>5   プロパティの削除</h2>
+    <p id="demo5"></p>
+    <script>
+        const delPerson = {
+            firstName : "John",
+            lastName : "Doe",
+            age : 50,
+            eyeColor : "blue"
+        };
+
+        delete delPerson.age;
+        delete delPerson.firstName;
+        delete delPerson.lastName;
+        document.getElementById("demo5").innerHTML = 
+        delPerson.firstName + " is " + delPerson.age + " years old.<br>" +
+        delPerson.lastName;
+        
+    </script>
     <h2>6   入れ子オブジェクト</h2>
+    <p id="demo6"></p>
+    <script>
+        const nestObj = {
+            name : "John",
+            age : 30,
+            cars : {
+                car1 : "Ford",
+                car2 : "BMW",
+                car3 : "Fiat"
+            }
+        }
+
+        let nest = "";
+        for (let x in nestObj.cars) {
+            nest += nestObj.cars[x] + " ";
+        }
+        document.getElementById("demo6").innerHTML = nest;
+    </script>
     <h2>7   入れ子になった配列とオブジェクト</h2>
+    <p id="demo7"></p>
+    <script>
+        let x = "";
+        const obj7 = {
+            name : "John",
+            age : 30,
+            cars : [
+                {name:"Ford", models:["Fiesta", "Focus","Mustang"]},
+                {name:"BMW", models:["320", "X3","X5"]},
+                {name:"Fiat", models:["500", "Panda"]}
+            ]
+        }
+
+        for (let i in obj7.cars) {
+            x += "<h2>" + obj7.cars[i].name + "</h2>";
+            for (let j in obj7.cars[i].models) {
+                x += obj7.cars[i].models[j] + "<br>";
+            }
+        }
+
+        document.getElementById("demo7").innerHTML = x;
+    </script>
     <h2>8   プロパティ属性</h2>
     <h2>9   プロトタイプのプロパティ</h2>
 </body>

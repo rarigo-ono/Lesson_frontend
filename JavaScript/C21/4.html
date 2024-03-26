@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-4</title>
+</head>
+<body>
+    <h1>表示オブジェクト</h1>
+    <h2>表示方法</h2>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            name : "John",
+            age : 30,
+            city : "New York"
+        }
+
+        document.getElementById("demo").innerHTML = person;
+    </script>
+    <p>JavaScriptオブジェクトを表示するための一般的な解決策</p>
+    <ul>
+        <li>オブジェクトプロパティを名前で表示する。</li>
+        <li>ループでのオブジェクトプロパティの表示する。</li>
+        <li>Object.values()を使って表示する。</li>
+        <li>JSON.stringify()を使って表示する。</li>
+    </ul>
+    <h2>オブジェクトプロパティの表示</h2>
+    <p id="demo2"></p>
+    <script>
+        var person = {
+            name : "John",
+            age : 30,
+            city : "New York"
+        }
+
+        document.getElementById("demo2").innerHTML = 
+        person.name + " " + person.age + " " + person.city;
+    </script>
+    <h2>ループで表示</h2>
+    <p id="demo3"></p>
+    <script>
+        var person = {
+            name : "John",
+            age : 30,
+            city : "New York"
+        }
+
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        };
+        document.getElementById("demo3").innerHTML = txt;
+    </script>
+    <h2>Object.values()の使い方</h2>
+    <p id="demo4"></p>
+    <script>
+        const myArray = Object.values(person);
+        document.getElementById("demo4").innerHTML = myArray;
+    </script>
+    <h2>JSON.stringify()の使い方</h2>
+    <p id="demo5"></p>
+    <script>
+        const myString = JSON.stringify(person);
+        document.getElementById("demo5").innerHTML = myString;
+    </script>
+    <h2>日付の文字列化</h2>
+    <p id="demo6"></p>
+    <script>
+        var datePerson = {
+            name : "John",
+            today : new Date()
+        };
+
+        document.getElementById("demo6").innerHTML = JSON.stringify(datePerson);
+    </script>
+    <h2>stringify関数</h2>
+    <h2>配列の文字列化</h2>
+    
+</body>
+</html>
