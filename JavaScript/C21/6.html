@@ -18,6 +18,9 @@
             this.lastName = last;
             this.age = age;
             this.eyeColor = eye;
+            this.name = function() {
+                return this.firstName + " " + this.lastName;
+            }
         }
 
         //2つのオブジェクトを作成
@@ -38,5 +41,7 @@
         document.getElementById("demo3").innerHTML = 
         "My father is " + myFather.nationality;
     </script>
+
+    <h2>メソッドの追加</h2>
 </body>
 </html>

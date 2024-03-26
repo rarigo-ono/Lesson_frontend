@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-3</title>
+</head>
+<body>
+    <h1>フォーム要素</h1>
+    <h2>input要素</h2>
+    <form action="">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname">
+    </form>
+    <h2>label要素</h2>
+    <form action="">
+        <label for="itemname">製品名を入力:</label>
+        <input type="text" id="itemname" name="itemname"><br>
+        <input type="text" id="rooftype" name="rooftype">
+        <label for="rooftype">←屋根のタイプを入力:</label><br>
+        <input type="submit" value="回答する">
+    </form>
+    <h2>select要素</h2>
+    <form action="">
+        <label for="roof">屋根タイプを選択してください。</label>
+        <select name="roof" id="roof" size="5" multiple>
+            <option value="R88">ルーフ88</option>
+            <option value="R150">ルーフ150</option>
+            <option value="y166">ヨドルーフ166</option>
+            <option value="y90">ヨドルーフ90</option>
+        </select><br>
+        <input type="submit" value="送信">
+    </form>
+    <h2>textarea要素</h2>
+    <form action="">
+        <textarea name="message" id="message" cols="30" rows="10">
+The cat was playing in the garden.
+        </textarea>
+    </form>
+    <h2>button要素</h2>
+    <form action="">
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+    <h2>fieldset要素とlegend要素</h2>
+    <h3>フィールドセットによるフォームデータのグループ化</h3>
+
+    <p>fieldset要素は、フォーム内の関連データをグループ化するために使われます。
+        また、legend要素はfieldset要素のキャプションを定義します。</p>
+    <form action="">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <h2>datalist要素</h2>
+    <form action="">
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Edge">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
+    <h2>output要素</h2>
+    <form action="" oninput="x.value = parseInt(a.value) * parseFloat(b.value)">
+        0
+        <input type="range" id="a" name="a" value="100">
+        100 ×
+        <input type="number" id="b" name="b" value="1.2">
+        =
+        <output name="x" for="a b"></output>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

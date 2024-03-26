@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A21-5</title>
+</head>
+<body>
+    <h1>入力属性</h1>
+    <h2>value</h2>
+    <p>入力フィールドの初期値を設定できます。</p>
+    <form action="">
+        <label for="test">テスト</label>
+        <input type="text" id="test" name="test" value="初期値が表示されます。">
+    </form>
+    <h2>readonly</h2>
+    <p>読み取り専用に設定できます。変更はできません。読み取り専用の値もフォーム送信時に送信されます。</p>
+    <form action="">
+        <label for="fname">名：</label><br>
+        <input type="fname" id="fname" name="fname"><br>
+        <label for="lname">苗字：</label><br>
+        <input type="text" id="lname" name="lname" value="小林※変更不可" readonly>
+    </form>
+    <h2>disabled</h2>
+    <p>入力フィールドを無効に設定できます。使用もクリックも不可。フォーム送信時に送信されません。</p>
+    <form action="">
+        <label for="fname">名：</label><br>
+        <input type="fname" id="fname" name="fname" value="John ※無効のフィールドです。" size="30" disabled><br>
+        <label for="lname">苗字：</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" readonly>
+    </form>
+    <h2>size</h2>
+    <p>表示幅を設定できます。デフォルト値は20です。</p>
+    <form action="">
+        <label for="fname">名：</label><br>
+        <input type="fname" id="fname" name="fname" size="50"><br>
+        <label for="lname">苗字：</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" size="4">
+    </form>
+    <h2>maxlength</h2>
+    <p>許可される最大文字数を指定します。</p>
+    <form action="">
+        <label for="fname">名：</label><br>
+        <input type="fname" id="fname" name="fname"><br>
+        <label for="lname">苗字：</label><br>
+        <input type="text" id="lname" name="lname" value="Doe" readonly><br>
+        <label for="pin">PIN：</label><br>
+        <input type="text" id="pin" name="pin" maxlength="4" size="4">
+    </form>
+    <p>↑入力文字数は4文字までの設定となっている。</p>
+    <h2>min & max</h2>
+    <p>数値、範囲、日付、日時フィールド、月、時間、週の入力タイプで機能します。</p>
+    <p>最大日付、最小日付、および有効な値の範囲を設定します。</p>
+    <form action="">
+        <label for="datemax">1980-01-01までの日付を設定してください。</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+        <label for="datemin">2000-01-02以降の日付を設定してください。</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+        <label for="quantity">1～5までの量を設定してください。</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+        <input type="submit">
+    </form>
+    <h2>multiple</h2>
+    <p>複数の電子メールやファイルの入力タイプで使います。</p>
+    <form action="">
+        <label for="files">ファイルを選択してください。</label>
+        <input type="file" id="files" name="files" multiple><br>
+        <input type="submit">
+    </form>
+    <h2>pattern</h2>
+    <p>pattern属性は、フォームが送信されるときにチェックされます。</p>
+    <p>日付、検索、URL、電話番号、電子メール、パスワードを入力時に機能します。</p>
+    <form action="">
+        <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="自国コードは3桁のアルファベットです。">
+    </form>
+    <h2>placeholder</h2>
+    <p>入力フィールドに入力する値の短いヒントを表示します。</p>
+    <form action="">
+        <label for="phone">携帯番号を入力してください:</label>
+        <input type="tel" id="phone" name="phone" placeholder="8桁の番号です。" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        <input type="submit">
+    </form>
+    <h2>必須属性</h2>
+    <h2>step</h2>
+    <h2>autofocus</h2>
+    <h2>height & width</h2>
+    <h2>list</h2>
+    <h2>autocomplete</h2>
+</body>
+</html>
