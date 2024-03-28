@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B21-28_フレックスボックス</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: dodgerblue;
+        }
+
+        .flex-container > div {
+            background-color: aliceblue;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>フレックスコンテナの作成</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <p>フレキシブルレイアウトには<em>display</em>プロパティが<em>flex</em>に設定された親要素が必要です。</p>
+    <p>フレキシブルコンテナの直接の子要素は、
+        自動的にフレキシブルアイテムになります。
+    </p>
+</body>
+</html>

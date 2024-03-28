@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B21-28_フレックスボックス</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            background-color: dodgerblue;
+        }
+
+        .flex-container > div {
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: dodgerblue;
+        }
+
+        .flex-container2 > div {
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container3 {
+            display: flex;
+            flex-direction: row;
+            background-color: dodgerblue;
+        }
+
+        .flex-container3 > div {
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+
+        .flex-container4 {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: darkolivegreen;
+        }
+
+        .flex-container4 > div {
+            background-color: aliceblue;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>フレックスコンテナの作成</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <br>
+
+    <div class="flex-container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <br>
+
+    <div class="flex-container3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <br>
+
+    <div class="flex-container4">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+
+</body>
+</html>
