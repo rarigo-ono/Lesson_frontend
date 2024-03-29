@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-2-extra</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        const myGame = {
+            title : "MyQuest",
+            player : "ヒロシ",
+            age : 20,
+            job : "騎士"
+        }
+
+        document.getElementById("demo").innerHTML = 
+        myGame.title + "を始めます。<br>プレイヤー名：" + myGame.player + "<br>選択職業：" +
+        myGame.job; 
+
+
+        const playerProfile = {
+            sex : "man",
+            age : 50,
+            jobs : {
+                battleJob : "騎士",
+                subJob : "商人",
+                darkJob : "仲介人"
+            },
+            level : 10,
+            magicLevel : 3,
+        };
+
+        playerProfile.birthDay = "2000/5/5";
+        delete playerProfile.sex;
+
+        let profile = "";
+        for (let x in playerProfile){
+            profile += playerProfile[x] + "<br>";
+        };
+        document.getElementById("demo2").innerHTML = profile + 
+        "裏の職業は、" + playerProfile.jobs.darkJob + "です。";
+    </script>
+</body>
+</html>

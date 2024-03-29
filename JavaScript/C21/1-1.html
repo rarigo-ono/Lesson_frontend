@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-1-extra</title>
+</head>
+<body>
+    <h1>JavaScriptオブジェクト</h1>
+    <h2>例</h2>
+    <p>RPGゲームの存在そのものをオブジェクトと捉えるとして、</p>
+    <p>オブジェクトは変数なので、単一の値や複数の値を含められます。</p>
+    <p>let myGame = "Hero's Quest"</p>
+    <p>let myGame = {name:"Hero's Quest", playStyle: "RPG", Hard: "PC",function(){return this.name}}</p>
+    <p>といった感じです。</p>
+    <p>上記の、name:"Hero's Quest"やplayStyle: "RPG"はプロパティと呼ばれます。</p>
+    <p>オブジェクト内の関数(今回でいうとfunction) のことをメソッドと呼びます。</p>
+
+    <h2>オブジェクトの作成（RPGゲームの作成）</h2>
+    <p id="demo"></p>
+    <p id="dome2"></p>
+    <script>
+        const myGame = {
+            title: "Hero's Quest",
+            player: "ヒロシ",
+            hard: "PC"
+            
+        }
+
+        const yourGame = myGame;
+        yourGame.player = "タケシ"
+
+        document.getElementById("demo").innerHTML = 
+        yourGame.title + " " + yourGame.player + " " + yourGame.hard;
+
+        
+    </script>
+</body>
+</html>
