@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-A</title>
+</head>
+<body>
+    <h3>オブジェクトは動的な存在です。</h3>
+    <script>
+        String.myFunc = function(){
+            return 'hoge';
+        }
+
+        console.log(String.myFunc());
+
+        var obj = {
+            prop1 : "bar",
+            prop2 : "foo"
+        }
+
+        console.log(obj.prop1);
+        delete obj.prop1;
+        console.log(obj.prop1);
+    </script>
+
+    <h3>3-7 Objectオブジェクト</h3>
+    <p>Objectオブジェクトは、全てのオブジェクトのベースとなる存在です。</p>
+    <p>他のオブジェクトに対して、共通的な性質や機能を提供します。</p>
+    <p>Objectオブジェクトをインスタンス化することで、匿名オブジェクトを定義することも可能です。</p>
+    <script>
+        var obj = new Array();
+        obj.val = 'hoge';
+        console.log(obj.val);
+    </script>
+
+    <h3>Globalオブジェクト</h3>
+    <p>Globalオブジェクトは、インスタンス化したりメソッドの呼び出しはできません。</p>
+    <script>
+        var num = 10;
+        console.log(isNaN(num)); //isNaNがグローバル関数
+    </script>
+
+    <h3>nullとundefined</h3>
+    <p>nullとは？</p>
+    <ul>
+        <li>「何もない」ことを意味します。</li>
+        <li>意図的に何もない状態ということを表すために利用します。</li>
+        <li>自前でセットしない限りは遭遇しない</li>
+    </ul>
+    <p>undefinedとは？</p>
+    <ul>
+        <li>「未定義」ことを意味します。</li>
+        <li>変数宣言したが値を代入していない、return文を書いてないなど</li>
+        <li>ウッカリミスで頻繁に出会う</li>
+    </ul>
+
+</body>
+</html>

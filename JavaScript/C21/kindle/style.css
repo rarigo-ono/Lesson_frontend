@@ -1,0 +1,29 @@
+body {
+    padding: 30px;
+}
+strong {
+    text-decoration: underline;
+    color: red;
+}
+
+code {
+    color: black;
+    font-weight: bold;
+}
+
+span {
+    font-size: 0.75rem;
+}
+
+.jscode {
+    border: 2px solid rgb(216, 90, 216);
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.print {
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 3px;
+    max-width: 400px;
+}

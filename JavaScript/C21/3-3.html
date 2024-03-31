@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-3</title>
+</head>
+<body>
+    <h3>JavaScriptメソッド</h3>
+    <p>オブジェクトに対して実行できるアクションのこと。</p>
+    <p>オブジェクトメソッドへのアクセス</p>
+    <p id="demo"></p>
+    <p>()なしでアクセスすると、関数定義を返す。</p>
+    <p id="demo2"></p>
+    <h3>メソッドの追加</h3>
+    <p id="demo3"></p>
+    <h3>組み込みメソッドの追加</h3>
+    <p id="demo4"></p>
+    <script>
+        const person = {
+            firstName : "John",
+            lastName : "Doe",
+            id : 5566,
+            fullName : function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        person.name = function() {
+            return this.firstName + " " + this.lastName;
+        }
+
+        person.upperName = function() {
+            return (this.firstName + " " + this.lastName).toUpperCase();
+        }
+
+        document.getElementById("demo").innerHTML = person.fullName();
+        document.getElementById("demo2").innerHTML = person.fullName;
+        document.getElementById("demo3").innerHTML = "My father is " + person.name();
+        document.getElementById("demo4").innerHTML = "My father is " + person.upperName();
+    </script>
+
+    
+</body>
+</html>

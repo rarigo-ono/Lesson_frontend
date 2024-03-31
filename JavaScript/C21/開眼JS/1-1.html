@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>オブジェクトは、名前と値をもつプロパティを格納するコンテナにすぎない。</h3>
+    <p id="demo"></p>
+    <p>オブジェクトにメソッドを持たせて表示↓</p>
+    <p id="objMethod"></p>
+
+    <p>上記のようなメソッドがないオブジェクトは、ただの静的データを格納する以外は、多くのこと
+        を行うことができません。
+    </p>
+    <p>コンストラクタ関数   あらかじめ決められたオブジェクトを生成するテンプレートみたいなもの</p>
+
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        var cody = new Object();
+
+        cody.living = true;
+        cody.age = 33;
+        cody.gender = "male";
+        cody.getGender = function() {
+            return cody.gender;
+        }
+
+        document.getElementById("demo").innerHTML = cody;
+        console.log(cody);
+        document.getElementById("objMethod").innerHTML = cody.getGender();
+
+        var myObject = new Object();
+
+        myObject["0"] = "f";
+        myObject["1"] = "o";
+        myObject["3"] = "o";
+        document.getElementById("demo2").innerHTML = myObject;
+        console.log(myObject);
+
+        var myString = new String("foo");
+        document.getElementById("demo3").innerHTML = myString;
+    </script>
+
+    <script>
+        var Person = function(living, age, gender) {
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        }
+
+        var cody = new Person(true, 38, "male");
+        console.log(cody);
+    </script>
+
+    <script>
+        var codyA = new Object();
+        codyA.living = true;
+        codyA.age = 33;
+        codyA.gender = 'male';
+        codyA.getGender = function() {
+            return codyA.gender;
+        }
+        console.log(codyA);
+        console.log("-------------------");
+
+        var Person = function(living, age, gender ) {
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function(){return this.gender};
+        }
+
+        var codyB = new Person(true, 38, 'male');
+        console.log(codyB);
+        console.log("-------------------");
+    </script>
+</body>
+</html>

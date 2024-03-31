@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-A</title>
+</head>
+<body>
+    <script>
+        var Member = function(firstName, lastName, age) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+            this.getInfo = function() {
+                return "氏名:" + this.lastName + '' + this.firstName + '(' + this.age + '歳)'
+            }
+        }
+
+        var yoshida = new Member("直樹","吉田", 50);
+        console.log(yoshida.getInfo());
+
+        
+    </script>
+</body>
+</html>

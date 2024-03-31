@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>オブジェクトへの理解</h1>
+    <!--3-1-->
+    <div>
+        <h2>3-1　JavaScriptにおけるオブジェクトとは？</h2>
+        <h3>「JavaScriptを理解する」とは「オブジェクトを理解する」といっても過言ではない。</h3>
+        <p>JavaScriptの世界では、<strong>オブジェクト</strong>が絶対的存在</p>
+        <p>ほぼ全ての<strong>「モノ」がオブジェクトであるか、オブジェクトのように振る舞う。</strong></p>
+    </div>
+    <!-- 3-2 -->
+    <div>
+    <h2>3-2　プロパティとメソッド</h2>
+    <h3>プロパティ</h3>
+    <p>オブジェクトの状態や特性を表す</p>
+    <h3>メソッド</h3>
+    <p>オブジェクトのプロパティとして格納されている関数</p>
+    <pre class="jscode">
+        <code>
+    var human = {};
+    human.name = "Igarashi";
+    human.age = 35;
+    human.sex = "M";
+    human.getInfo = function() {
+        return human.name + " " + human.age + " " + human.sex;
+    }
+    document.getElementById("objMethod").innerHTML = human.getInfo();
+        </code>
+    </pre>
+    <p>出力結果</p>
+    <p id="objMethod"></p>
+
+    <script>
+        var human = {};
+        human.name = "Igarashi";
+        human.age = 35;
+        human.sex = "M";
+        human.getInfo = function() {
+            return human.name + " " + human.age + " " + human.sex;
+        }
+        document.getElementById("objMethod").innerHTML = human.getInfo();
+    </script>
+
+    <p>次のコードは、上のコードと同じ結果を得られる。</p>
+
+    <pre class="jscode">
+        <code>
+    var human = {
+        name : "Igarashi",
+        age : 35,
+        sex : "M",
+        getInfo : function() {
+            return human.name + " " + human.age + " " + human.sex;
+        }
+    }
+
+    document.getElementById("objMethod2").innerHTML = human.getInfo();
+        </code>
+    </pre>
+
+    <p>出力結果</p>
+    <p id="objMethod2"></p>
+
+    <script>
+        var human = {
+            name : "Igarashi",
+            age : 35,
+            sex : "M",
+            getInfo : function() {
+                return human.name + " " + human.age + " " + human.sex;
+            }
+        }
+
+        document.getElementById("objMethod2").innerHTML = human.getInfo();
+    </script>
+    </div>
+    <!--3-3-->
+    <div>
+    <h2>3-3 New演算子</h2>
+    <p>オブジェクトを生成するときは、new演算子を使う。</p>
+    <p>リテラル表記で生成する場合も、実はnew演算子を用いて場合と同じ結果を取得できる。</p>
+    <p><span>リテラル表記とは？・・・入力した値そのもの</span></p>
+
+    <pre class="jscode">
+        <code>
+    var obj1 = new Object(); //New演算子
+    var obj2 = {}; //リテラル表記
+    
+    document.getElementById("obj1").innerHTML = obj1;
+    document.getElementById("obj2").innerHTML = obj1;
+        </code>
+    </pre>
+    <p>出力結果</p>
+    <p id="obj1"></p>
+    <p id="obj2"></p>
+    <script>
+        var obj1 = new Object();
+        var obj2 = {};
+
+        document.getElementById("obj1").innerHTML = obj1;
+        document.getElementById("obj2").innerHTML = obj1;
+    </script>
+
+    <p>一般的には、リテラル表記が好まれる<span>　※記述量が少ないから</span></p>
+    <p>New演算子とは何者か？<br>
+        <strong>「オブジェクトのインスタンスを返却しなさいとコンストラクタに命令する」</strong>ための演算子である。</p>
+    <p>・・・？書いてる本人もわからないので例で確認↓</p>
+    <pre class="jscode">
+        <code>
+    //オブジェクト作成
+    var myFunc = function() {
+        this.prop1 = 'bar';
+        this.prop2 = 'foo';
+        this.method = function(){
+            return this.prop1 + " " + this.prop2;
+        }
+    }
+
+    var obj1 = new myFunc();
+    var obj2 = myFunc();
+
+    let txt = obj1 + "  /  " + obj2;
+    document.getElementById("myFunc").innerHTML = txt;
+
+    ※prop　部品や小道具といった意味
+        </code>
+    </pre>
+    <p>出力結果</p>
+    <p id="myFunc"></p>
+    <script>
+        var myFunc = function() {
+            this.prop1 = 'bar';
+            this.prop2 = 'foo';
+            this.method = function(){
+                return this.prop1 + " " + this.prop2;
+            }
+        }
+
+        var obj1 = new myFunc();
+        var obj2 = myFunc();
+
+        var txt = obj1 + "  /  " + obj2;
+        document.getElementById("myFunc").innerHTML = txt;
+        
+    </script>
+
+    <p>べtの例で確認↓</p>
+    <pre class="jscode">
+        <code>
+    var myFunc = function() {
+        this.prop1 = 'bar';
+    }
+
+    var obj1 = new myFunc();
+    var obj2 = myFunc();
+
+    let txt = obj1 + "  /  " + obj2;
+    document.getElementById("myFunc").innerHTML = txt;
+        </code>
+    </pre>
+    <p>出力結果</p>
+    <p id="myFunc2"></p>
+    <script>
+        var myFunc = function() {
+            this.prop1 = 'bar';
+            this.prop2 = 'foo';
+            this.method = function(){
+                return this.prop1 + " " + this.prop2;
+            }
+        }
+
+        var obj1 = new myFunc();
+        var obj2 = myFunc();
+
+        var txt = obj1 + "  /  " + obj2;
+        document.getElementById("myFunc2").innerHTML = txt;
+        
+    </script>
+    </div>
+    <!--3-4-->
+    <div>
+        <h2>独自のコンストラクタを定義する</h2>
+        <p>コンストラクタは関数で独自に定義ができる。</p>
+        <pre class="jscode">
+            <code>
+    var Member = function(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.getInfo = function() {
+            return "氏名：" + this.lastName + '' + 
+            this.firstName + '(' + this.age + '歳)'
+        }
+    }
+
+    var ono = new Member("圭介", "小野", 38);
+    var azuki = new Member("あずき", "小野", 12);
+
+    document.getElementById("demo4").innerHTML = ono.getInfo();
+            </code>
+        </pre>
+        <div class="print">
+            <p>出力結果</p>
+            <p id="demo4"></p>
+        </div>
+        <script>
+            var Member = function(firstName, lastName, age) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.getInfo = function() {
+                    return "氏名：" + this.lastName + '' + this.firstName + '(' + this.age + '歳)'
+                }
+            }
+
+            var ono = new Member("圭介", "小野", 38);
+            var azuki = new Member("あずき", "小野", 12);
+
+            let members = ono.getInfo() + " & " + azuki.getInfo();
+
+            document.getElementById("demo4").innerHTML = members;
+        </script>
+    </div>
+    <!-- 3-5 -->
+    <div>
+        <h2>3-5 オブジェクトとプリミティブ型</h2>
+        <p>プリミティブ型が通常は値そのものです。</p>
+        <p>しかし、number,string,booleanは場合によっては、オブジェクトになっているケースがある</p>
+        <pre class="jscode">
+            <code>
+    var num = 999;
+    var num2 = new Number(999);
+
+    document.getElementById("demo5-1").innerHTML = 
+    "変数numの型：" + typeof num;
+
+    document.getElementById("demo5-2").innerHTML = 
+    "変数num2の型：" + typeof num2;
+            </code>
+        </pre>
+        <div class="print">
+            <p>出力結果</p>
+            <p id="demo5-1"></p>
+            <p id="demo5-2"></p>
+        </div>
+        
+        <script>
+            var num = 999;
+            var num2 = new Number(999);
+
+            document.getElementById("demo5-1").innerHTML = "変数numの型：" + typeof num;
+            document.getElementById("demo5-2").innerHTML = "変数num2の型：" + typeof num2;
+        </script>
+
+        <p>num2は、new演算子を使ってNumberコンストラクタを呼び出したので、Numberオブジェクトのインスタンスに格納されている</p>
+        <p>numは、数値リテラルを入力しただけなので、プリミティブ型になる。</p>
+    </div>
+    <!-- 3－6 -->
+    <div>
+        <h2>3-6 オブジェクトは動的な存在</h2>
+        <p>以下の例</p>
+        <pre class="jscode">
+            <code>
+    String.myFunc = function() {
+        return 'hoge';
+    }
+    document.getElementById("demo6").innerHTML = String.myFunc();
+
+    var obj = {
+        prop1 : 'bar',
+        prop2 : 'foo'
+    }
+
+    document.getElementById("demo6-2").innerHTML = obj.prop1;
+    delete obj.prop1;
+    document.getElementById("demo6-3").innerHTML = obj.prop1;
+            </code>
+        </pre>
+        <div class="print">
+            <p>出力結果</p>
+            <p id="demo6"></p>
+            <p id="demo6-2"></p>
+            <p id="demo6-3"></p>
+        </div>
+        
+        <script>
+            String.myFunc = function() {
+                return 'hoge';
+            }
+            document.getElementById("demo6").innerHTML = String.myFunc();
+
+            var obj = {
+                prop1 : 'bar',
+                prop2 : 'foo'
+            }
+
+            document.getElementById("demo6-2").innerHTML = obj.prop1;
+            delete obj.prop1;
+            document.getElementById("demo6-3").innerHTML = obj.prop1;
+        </script>
+    </div>
+    <!-- 3-7 -->
+    <div>
+        <h2>3-7 Objectオブジェクト</h2>
+        <p>Objectオブジェクトは、全てのオブジェクトのベースとなる存在</p>
+        <p>他のオブジェクトに対して、共通的な性質や機能を提供します。</p>
+        <p>Objectオブジェクトをインスタンス化することで、匿名オブジェクトを定義することもできます。</p>
+        <p><span>※再利用することが無ければ、わざわざ「クラス」にすることもない</span></p>
+        <p>匿名オブジェクトはArrayのようなネイティブオブジェクトからも定義可能です。</p>
+        <pre class="jscode">
+            <code></code>
+        </pre>
+        <div class="print">
+            <p>出力結果</p>
+            <p id="demo7"></p>
+        </div>
+        
+        <script>
+            var obj = new Array();
+            obj.val = '→これは3-7の出力';
+            document.getElementById("demo7").innerHTML = obj.val;
+        </script>
+    </div>
+    <!-- 3-8 -->
+    <div>
+        <h2>3-8 Globalオブジェクト</h2>
+        <p>Globalオブジェクトは、インスタンス化したりメソッドを呼び出したりすることは出来ない。</p> 
+    </div>
+    <!-- 3-9 -->
+    <div>
+        <h2>3-9 nullとundefined</h2>
+        <h3>null</h3>
+        <ul>
+            <li>何もないことを意味する。</li>
+            <li>意図的に何もない状態を表すために利用する。</li>
+            <li>基本的に自前でセットしない限りは遭遇しない。</li>
+        </ul> 
+        <h3>undefined</h3>
+        <ul>
+            <li>未定義を意味する。</li>
+            <li>様々な場面で出くわす。</li>
+            <li>ウッカリミスで出くわす。
+                <ul>
+                    <li>変数に期待値でなくundefineが入っている。</li>
+                    <li>変数名が微妙に違う</li>
+                </ul></li> 
+        </ul>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--テンプレート-->
+    <p>※下はテンプレート</p>
+    <pre class="jscode">
+        <code></code>
+    </pre>
+    <div class="print">
+        <p>出力結果</p>
+        <p id=""></p>
+    </div>
+    
+    <script>
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-A</title>
+</head>
+<body>
+    <script>
+        /*
+        var human = {};
+        human.name = "Igarashi";
+        human.age = 35;
+        human.sex = "M";
+        human.getInfo = function(){
+            return human.name + ' ' + human.age + " " + human.sex
+        }
+
+        console.log(human.getInfo());
+
+        var obj1 = new Object();
+        var obj2 = {};
+        console.log(obj1 + " " + obj2);
+
+        var myFunc = function(){
+            this.prop1 = "var";
+            this.prop2 = "foo";
+            this.method = function() {
+                this.prop1 + this.prop2;
+            }
+        }
+
+        var obj1 = new myFunc();
+        var obj2 = myFunc();
+
+        console.log(obj1);
+        console.log(obj2);
+        */
+        var myFunc = function() {
+            this.prop1 = 'bar';
+            return 'boo';
+        }
+
+        var obj1 = new myFunc();
+        var obj2 =myFunc();
+
+        console.log(obj1);
+        console.log(obj2);
+
+    </script>
+</body>
+</html>

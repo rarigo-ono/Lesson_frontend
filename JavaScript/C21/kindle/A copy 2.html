@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-A</title>
+</head>
+<body>
+    <h1>オブジェクトとプリミティブ型</h1>
+    <p>プリミティブ型の種類</p>
+    <ul>
+        <li>boolean</li>
+        <li>number</li>
+        <li>string</li>
+        <li>null</li>
+        <li>undefined</li>
+    </ul>
+    <p>プリミティブ型が「通常は」値そのものです。</p>
+    <p>一時的にオブジェクトになってるケースがある。</p>
+    <script>
+    var num = 999;
+    var num2 = new Number(999);
+
+    console.log(typeof num);
+    console.log(typeof num2);
+
+    console.log(num.toString());
+    console.log(num2.toString());
+        
+    </script>
+</body>
+</html>

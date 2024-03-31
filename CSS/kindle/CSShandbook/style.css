@@ -1,0 +1,40 @@
+main {
+    padding: 10px;
+}
+pre {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgb(38, 114, 78);
+}
+
+span {
+    font-size: 0.8rem;
+    color: red;
+}
+
+/* フレキシブルイメージ　*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 画面幅が768px以上の場合に適用するスタイル */
+@media (min-width: 768px){
+    body {
+        font-size: 0.8rem;
+    }
+    /*画像は赤い帽子の女の子の画像が適用*/
+    #imgChange {
+        content: url("img_girl3.jpg")
+    }
+}
+/* 画面幅が480px以下の場合に適用するスタイル */
+@media (max-width: 480px){
+    body {
+        font-size: 1.3rem;
+    }
+    /*画像は灰色のニットを纏った女の子の画像が適用*/
+    #imgChange {
+        content: url("img_girl2.jpg")
+    }
+}

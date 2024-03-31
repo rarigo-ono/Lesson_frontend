@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>chapter2:レスポンシブデザイン</h1>
+    <div>
+        <h2>メディアクエリの仕様</h2>
+        <p>異なるデバイスや画面サイズに対応したレスポンシブデザインを実現するツール</p>
+        <p>CSS3の一部で特定条件を満たすデバイスに対して適用される。</p>
+        <p>画面幅に応じたスタイル変更<span> ※style.css参照</span></p>
+    </div>
+    <div>
+        <h2>レスポンシブレイアウト</h2>
+        <p>異なるデバイスや画面サイズに合わせてWEBページが最適に表示される設計</p>
+        <p>レスポンシブデザインの原則</p>
+        <ul>
+            <li>フルードグリッド <br>
+            柔軟に配置するめの重要な原則。固定幅のデザインではなく、相対的な幅の要素やコンテナを用いて、
+        コンテンツが画面サイズに適応できる設計</li>
+            <li>フレキシブルイメージ <br>
+            画像もウィンドウサイズに応じて調整される必要がある。
+            `max-width: 100%`を設定し、画像の最大幅を親要素に合わせる。</li>
+            <li>メディアクエリ</li>
+            <li>コンテンツの優先順位</li>
+            <li>テストとデバッグ</li>
+        </ul>
+        <p>メリット</p>
+        <ul>
+            <li>ユーザーエクスペリエンス向上</li>
+            <li>SEO向上</li>
+            <li>コンテンツ管理の効率化</li>
+        </ul>
+        
+    </div>
+    <div>
+        <h2>画像のレスポンシブ対応</h2>
+        <h3>フレキシブルイメージ</h3>
+        <p>画面サイズに適した画像の表示方法<span> ※style.css参照</span></p>
+        <img src="img_girl3.jpg" alt="winter girl">
+        <h3>メディアクエリによる画像の切り替え<span> ※style.css参照</span></h3>
+        <img id="imgChange" src="img_girl3.jpg" alt="winter girl">
+    </div>
+    <div>
+        <h2>モバイルファーストデザイン</h2>
+    </div>
+</body>
+</html>
