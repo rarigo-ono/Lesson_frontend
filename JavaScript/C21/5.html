@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C21-5</title>
+</head>
+<body>
+    <h1>オブジェクトタイプ（設計図）（クラス）</h1>
+    <h2>Object Constructors</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <hr>
+    <h2>組み込みオブジェクト</h2>
+    <p id="demo4"></p>
+
+    <script>
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            this.nationality = "English";
+            this.name = function() {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+
+        const myFather = new Person("John", "Doe", 50, "blue");
+        const myMother = new Person("Sally", "Rally", 48, "green");
+
+        /*
+        //オブジェクトプロパティの追加 2
+        myFather.nationality = "English";
+        //オブジェクトメソッドの追加 3
+        myFather.name = function () {
+            return this.firstName + " " + this.lastName;
+        }
+        */
+        document.getElementById("demo").innerHTML = myFather.age
+
+        document.getElementById("demo2").innerHTML =myFather.nationality;
+        document.getElementById("demo3").innerHTML = myFather.name();
+    </script>
+
+    <script>
+        const x1 = new String();
+        const x2 = new Number();
+        const x3 = new Boolean();
+        const
+    </script>
+</body>
+</html>
