@@ -6,61 +6,20 @@
     <title>1-22</title>
 </head>
 <body>
-    <h1>非同期処理：Promise/Async Function</h1>
-    <h2>その前に同期処理</h2>
-    <ul>
-        <li>コードを順番に処理</li>
-        <li>ひとつの処理が終わるまで次の処理は×</li>
-    </ul>
-
-    <h2>非同期処理</h2>
-    <p>ひとつの非同期処理を待たずに次の処理をする。(複数の処理が同時に実行できる。)</p>
     <script>
-        function taskA() {
-            console.log("タスクAを実行 at" + Date.now());
+        const promise = new Promise((resolve, reject) => {});
+
+        const onFulfilled = () => {
+            console.log("resolveされたときに呼ばれる");
+        };
+
+        const onRejected = () => {
+            console.log("rejectされたときに呼ばれる");
         }
-
-        function taskB() {
-            console.log("タスクBを実行 at" + Date.now());
-        }
-
-        function taskAsync() {
-            console.log("非同期処理のタスクを実行 at" + Date.now());
-        }
-
-        function blockTime(timeout) {
-            const startTime = Date.now();
-            while (true) {
-                const diffTime = Date.now() - startTime;
-                if (diffTime >= timeout) {
-                    return;
-                }
-            }
-        }
-
-        const startTime = Date.now();
-        taskA();
-
-        //10ﾐﾘ秒後にコールバック関数を呼び出すタイマーを定義
-        try {
-            setTimeout(() => {
-                const endTime = Date.now()
-                taskAsync();
-                console.log(`非同期処理のコールバックが呼び出されるまで${endTime - startTime}ミリ秒かかりました`);
-            },10);
-        } catch (error) {
-            console.log("エラーをキャッチできる");
-        }
-        console.log("この行は実行されます。");
-        blockTime(1000);
-
-        tastB();
-
         
-        
-
+        //thenメソッドで成功時と失敗時に呼ばれるコールバック関数を定義
+        promise.then(onFulfilled, onRejected);
     </script>
-
 
 </body>
 </html>
