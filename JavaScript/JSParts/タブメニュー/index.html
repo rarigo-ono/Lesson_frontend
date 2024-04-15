@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タブメニュー</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <ul class="tabmenu">
+        <li class="tablist active">JavaScript</li>
+        <li class="tablist">BootStrap5</li>
+        <li class="tablist">cssAnimation</li>
+        <li class="tablist">HTML</li>
+    </ul>
+    <ul>
+        <li class="tabcontents active">コンテンツタブ１<br>JavaScript</li>
+        <li class="tabcontents">コンテンツタブ２<br>BootStrap5</li>
+        <li class="tabcontents">コンテンツタブ３<br>cssAnimation</li>
+        <li class="tabcontents">コンテンツタブ４<br>HTML</li>
+    </ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tablists = document.querySelectorAll(".tablist");
+            const tabcontents = document.querySelectorAll(".tabcontents");
+            function removeActiveClass() {
+                tablists.forEach(tablist => tablist.classList.remove('active'));
+            };
+
+            function addActiveClass(index) {
+                tablists[index].classList.add("active");
+                tabcontents[index].classList.add("active");
+            };
+
+            tablists.forEach((tablist, index) => {
+                tablist.addEventListener('clicd', () => {
+                    removeActiveClass();
+                    addActiveClass(index);
+                });
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>

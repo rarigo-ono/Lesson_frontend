@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/*タブ親指定*/
+.tabmenu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+/*タブメニュー指定*/
+.tablist {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 20px 40px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+/*最後のメニュー以外にかける指定*/
+.tablist::not(:last-child) {
+    margin-left: 1px;
+}
+
+/*タブコンテンツ指定*/
+.tablist.active,
+.tabcontent.active {
+    display: block;
+}
+
+.tablist.active {
+    background-color: #8ed8ff;
+}
