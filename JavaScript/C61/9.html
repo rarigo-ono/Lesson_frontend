@@ -12,6 +12,59 @@
         <br><br>
         ユーザーが要素をクリックしたときにコードを実行するには、HTML イベント属性に JavaScript コードを追加します。</p>
     
+    <hr>
+
     <h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
-    </body>
+
+    <hr>
+
+    <h1 onclick="changeText(this)">Click on this text!</h1>
+    <script>
+        function changeText(id) {
+            id.innerHTML = "Ooops!";
+        }
+    </script>
+    <hr>
+    <h1>イベント属性に</h1>
+    <button onclick="displayDate()">今の時間は？</button>
+    <script>
+        function displayDate() {document.getElementById("demo").innerHTML = Date();}
+    </script>
+    <p id="demo"></p>
+
+    <hr>
+    <p>Try itのボタンを押すと現在の時刻を表示できます。</p>
+    <button id="myBtn">Try it</button>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("myBtn").onclick = displayDate;
+        function displayDate(){
+            document.getElementById("demo2").innerHTML = Date();
+        }
+    </script>
+
+    <hr>
+    <p>oninputイベント</p>
+    名前を入力してください: <input type="text" id="fname" oninput="upperCase()">
+    <p>ローマ字入力した文字は全て大文字に自動的に変換されます。</p>
+    <script>
+        function upperCase(){
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    <hr>
+    
+    <p>変更時イベント(onchange)</p>
+    名前を入力してください: <input type="text" id="fname2" onchange="upperCase()">
+    <p>ローマ字入力した文字は全て大文字に自動的に入力後に変換されます。</p>
+    <script>
+        function upperCase(){
+            const y = document.getElementById("fname2");
+            y.value = y.value.toUpperCase();
+        }
+    </script>
+    <hr>
+</body>
+
 </html>
