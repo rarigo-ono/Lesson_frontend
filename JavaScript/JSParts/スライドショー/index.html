@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide_show</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="img/img1.jpg" id="slide_img" class="slider">
+
+    <script>
+        const img_src = ["img/img1.jpg", "img/img2.jpg", "img/img3.jpg"];
+        let num = -1;
+
+        function slide_time() {
+            /*
+            if(num === 2) {
+                num = 0;
+            } else {
+                num++;
+            }
+            document.getElementById("slide_img").src = img_src[num];
+            */
+
+            num = Math.floor(Math.random() * img_src.length);
+            document.getElementById("slide_img").src = img_src[num];
+        }
+
+        setInterval(slide_time, 1500);
+    </script>
+</body>
+</html>
