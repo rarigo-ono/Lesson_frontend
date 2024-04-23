@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>HTMLスタイルの変更</h2>
+    <p id="p2">Hello World!</p>
+
+    <script>
+        document.getElementById("p2").style.color = "blue";
+    </script>
+
+    <hr>
+
+    <h2>イベントの仕様</h2>
+    <h1 id="id1">My Heading</h1>
+    <button type="button"
+    onclick="document.getElementById('id1').style.color = 'red';"
+    >文字色が赤くなるよ</button>
+    <hr>
+    <h2>表示・非表示</h2>
+    <p id="p1">
+        これはテキストです。
+        これはテキストです。
+        これはテキストです。
+        これはテキストです。
+        これはテキストです。
+    </p>
+
+    <input type="button" value="Hide text"
+     onclick="document.getElementById('p1').style.visibility = 'hidden'">
+    <input type="button" value="Show text"
+     onclick="document.getElementById('p1').style.visibility = 'visible'">
+     <hr>
+     
+
+</body>
+</html>
