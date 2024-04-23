@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", displayDate);
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+
+    <hr>
+    <button id="myBtn2">警告ウィンドウが表示</button>
+    <script>
+        document.getElementById("myBtn2").addEventListener("click", function() {
+             alert("Hello World!");
+            });
+    </script>
+    <hr>
+    <button id="myBtn3">2回ウィンドウが表示</button>
+    <script>
+        var x = document.getElementById("myBtn3");
+        x.addEventListener("click", myFunction);
+        x.addEventListener("click", someOtherFunction);
+
+        function myFunction() {
+            alert("1回目のウィンドウ表示です。");
+        }
+
+        function someOtherFunction() {
+            alert("2回目のウィンドウ表示です。")
+        }
+
+    </script>
+    <hr>
+    <button id="myBtn4">ボタンにカーソルを合わせたり、離したり、クリックするとログが記録されます。</button>
+
+    <p id="test4"></p>
+    <script>
+        var y = document.getElementById("myBtn4");
+        y.addEventListener("mouseover", myMouseOver)
+        y.addEventListener("click", myClick);
+        y.addEventListener("mouseout", myMouseOut);
+
+        function myMouseOver() {
+            document.getElementById("test4").innerHTML += "マウスを合わせました！<br><hr>";
+        }
+
+        function myClick() {
+            document.getElementById("test4").innerHTML += "マウスをクリックしました！<br><hr>";
+        }
+        function myMouseOut() {
+            document.getElementById("test4").innerHTML += "マウスを離しました！<br><hr>";
+        }
+    </script>
+</body>
+</html>
