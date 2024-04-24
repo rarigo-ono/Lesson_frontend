@@ -61,5 +61,30 @@
             document.getElementById("test4").innerHTML += "マウスを離しました！<br><hr>";
         }
     </script>
+
+    <hr>
+    <p>Windowサイズを変更すると、</p>
+    <p>数字は<span id="test5"></span>に変更されます。</p>
+
+    <script>
+        window.addEventListener("resize", function() {
+            document.getElementById("test5").innerHTML = Math.random();
+        })
+    </script>
+
+    <hr>
+    <button id="myBtn6">Try it</button>
+    <p id="test6"></p>
+    <script>
+        let p1 = 5;
+        let p2 = 7;
+        document.getElementById("myBtn6").addEventListener("click", function() {
+            myFunction(p1, p2);
+        });
+
+        function myFunction(a, b) {
+            document.getElementById("test6").innerHTML = a * b;
+        }
+    </script>
 </body>
 </html>
